@@ -1,0 +1,13 @@
+{% block content %}
+Add Questions
+<form method="POST">{% csrf_token %}
+
+<table>
+{{form.as_table}}
+<tr>
+<td><a href="/questions/">Cancle</a></td>
+<td><input type="submit" value="Update"></td>
+</table>
+
+
+{% endblock content %}

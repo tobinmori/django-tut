@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ flatpage.title }}</title>
+</head>
+<p>Default Tmpl</p>
+<body>
+{{ flatpage.content }}
+</body>
+</html>
+
+
+{% load flatpages %}
+{% get_flatpages as flatpages %}
+<ul>
+  {% for page in flatpages %}
+    <li><a href="/pages{{ page.url }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
